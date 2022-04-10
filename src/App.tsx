@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from './app/hooks';
-import { update } from './features/counter';
+import { amountAdded, update } from './features/counter';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   const dispatch = useAppDispatch();
 
   const handleClick = () => {
-    dispatch(update());
+    dispatch(amountAdded(6));
   };
   return (
     <div className="App">
